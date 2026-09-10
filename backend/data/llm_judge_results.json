@@ -3,7 +3,7 @@
     "module": "Spotify Support Agent LLM-as-Judge Evaluation",
     "sample_size": 30,
     "rubric_scale": "1-5 for Correctness, Groundedness, Empathy, Actionability; PASS/FAIL for Hallucination",
-    "generated_at": "2026-09-10T16:49:41.186457+00:00"
+    "generated_at": "2026-09-10T17:00:13.152720+00:00"
   },
   "inter_rater_agreement_metrics": {
     "cohens_kappa": 0.692,
