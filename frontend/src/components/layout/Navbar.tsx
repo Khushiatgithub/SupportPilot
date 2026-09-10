@@ -55,14 +55,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="pointer-events-none">
               <div className="flex items-center space-x-2">
                 <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-gray-200 to-teal-200 bg-clip-text text-transparent">
-                  Hiver AI
+                  SupportPilot
                 </span>
                 <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20">
-                  Agent v1.0
+                  v1.0
                 </span>
               </div>
               <p className="text-xs text-gray-400 font-medium hidden sm:block">
-                Autonomous Twitter Support & Triage Platform
+                Autonomous AI Support & Triage Platform
               </p>
             </div>
           </Link>

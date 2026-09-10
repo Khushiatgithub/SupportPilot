@@ -1,4 +1,4 @@
-# 🎧 Spotify AI Support Agent & Intelligent Escalation Platform
+# 🎧 SupportPilot — Autonomous AI Support & Intelligent Escalation Platform
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-18.3+-61DAFB.svg?style=flat&logo=react&logoColor=black)](https://reactjs.org)
@@ -8,7 +8,7 @@
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.4+-F7931E.svg?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 
-An enterprise-grade, end-to-end AI customer support agent and intelligent routing platform purpose-built for `@SpotifyCares` high-volume Twitter/X customer support. The system handles **unsupervised & supervised intent discovery**, **grounded RAG reply generation**, **multi-factor escalation routing**, **Golden Set human-in-the-loop benchmarking**, and an **LLM-as-Judge evaluation framework** measuring statistical inter-rater agreement.
+**SupportPilot** is an enterprise-grade, end-to-end AI customer support agent and intelligent triage platform. The system orchestrates **unsupervised & supervised intent discovery**, **grounded RAG reply generation**, **multi-factor escalation routing**, **Golden Set human-in-the-loop benchmarking**, and an **LLM-as-Judge evaluation framework** measuring statistical inter-rater agreement.
 
 ---
 

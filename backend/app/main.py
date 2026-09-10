@@ -79,7 +79,7 @@ def health_check():
 @app.get("/")
 def root():
     return {
-        "message": "Hiver AI Support Agent API is running",
+        "message": "SupportPilot API is running",
         "docs": "/docs",
         "health": "/api/health"
     }

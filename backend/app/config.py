@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Settings:
-    PROJECT_NAME: str = "Hiver AI Support Agent"
+    PROJECT_NAME: str = "SupportPilot"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/api"
     

@@ -257,7 +257,7 @@ export function App() {
       {/* Footer */}
       <footer className="border-t border-gray-800/60 py-4 mt-12 bg-gray-950/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} Hiver AI Support Agent. Built with FastAPI, PostgreSQL/SQLite, scikit-learn & React Router.</p>
+          <p>© {new Date().getFullYear()} SupportPilot. Built with FastAPI, PostgreSQL/SQLite, scikit-learn & React Router.</p>
           <div className="flex items-center space-x-4">
             <span className="flex items-center space-x-1">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
