@@ -1,0 +1,52 @@
+=== SPOTIFY SUPPORT INTENT CLASSIFICATION EVALUATION REPORT ===
+Evaluated on 200 Golden Set Samples (conversations.true_intent)
+
+Model Name,Accuracy,Macro Precision,Macro Recall,Macro F1,Total Errors,Avg Latency (ms)
+Majority Class Baseline,16.00%,2.00%,12.50%,3.45%,168,0.18
+TF-IDF + Logistic Regression,67.50%,66.40%,65.40%,65.65%,65,3.45
+Sentence Embeddings + Nearest Centroid,67.00%,66.34%,65.02%,65.46%,66,8.81
+
+=== PER-INTENT METRICS (Sentence Embeddings + Nearest Centroid) ===
+Canonical Intent,Precision,Recall,F1-Score,Support
+Family & Student Plan Eligibility & Verification,92.00%,88.46%,90.20%,26
+Smart Speaker & External Device Connectivity,72.22%,59.09%,65.00%,22
+"App Stability, OS Freezes & Crash Reports",60.71%,65.38%,62.96%,26
+Audio Streaming Quality & Playback Errors,50.00%,62.96%,55.74%,27
+Product Feature Requests & UI Enhancements,33.33%,35.29%,34.29%,17
+"Account Login, Password & Security Access",63.16%,57.14%,60.00%,21
+"Billing, Subscriptions & Refund Inquiries",89.29%,86.21%,87.72%,29
+Offline Playlists & Download Storage Management,70.00%,65.62%,67.74%,32
+
+=== 8x8 CONFUSION MATRIX (Sentence Embeddings + Nearest Centroid) ===
+Actual \ Predicted,Family & Student Plan Eligibility & Verification,Smart Speaker & External Device Connectivity,"App Stability, OS Freezes & Crash Reports",Audio Streaming Quality & Playback Errors,Product Feature Requests & UI Enhancements,"Account Login, Password & Security Access","Billing, Subscriptions & Refund Inquiries",Offline Playlists & Download Storage Management
+Family & Student Plan Eligibility & Verification,23,0,1,2,0,0,0,0
+Smart Speaker & External Device Connectivity,0,13,1,4,0,1,0,3
+"App Stability, OS Freezes & Crash Reports",1,0,17,2,4,0,0,2
+Audio Streaming Quality & Playback Errors,0,2,1,17,4,0,0,3
+Product Feature Requests & UI Enhancements,0,2,2,4,6,3,0,0
+"Account Login, Password & Security Access",0,0,3,1,4,12,1,0
+"Billing, Subscriptions & Refund Inquiries",1,0,0,0,0,2,25,1
+Offline Playlists & Download Storage Management,0,1,3,4,0,1,2,21
+
+=== TOP 20 MISCLASSIFIED EXAMPLES ===
+Sample #,Conversation ID,Customer Tweet,Actual True Intent,Predicted Intent,Confidence,Error Type
+143,twcs_11982,@SpotifyCares Please add an option to exclude certain playlists from my Taste Profile and Spotify Wrapped!,"App Stability, OS Freezes & Crash Reports",Product Feature Requests & UI Enhancements,85.9%,"Actual 'App Stability, OS Freezes & Crash Reports' misclassified as 'Product Feature Requests & UI Enhancements'"
+12,twcs_10507,@SpotifyCares PS5 game audio volume slider doesn't balance background Spotify music properly.,Smart Speaker & External Device Connectivity,Audio Streaming Quality & Playback Errors,82.3%,Actual 'Smart Speaker & External Device Connectivity' misclassified as 'Audio Streaming Quality & Playback Errors'
+146,twcs_10644,@SpotifyCares App crashes when attempting to view artist about biography page with high-res photos.,"Account Login, Password & Security Access","App Stability, OS Freezes & Crash Reports",80.3%,"Actual 'Account Login, Password & Security Access' misclassified as 'App Stability, OS Freezes & Crash Reports'"
+3,twcs_10948,@SpotifyCares Xbox Series X game audio volume slider doesn't balance background Spotify music properly.,Smart Speaker & External Device Connectivity,Audio Streaming Quality & Playback Errors,77.8%,Actual 'Smart Speaker & External Device Connectivity' misclassified as 'Audio Streaming Quality & Playback Errors'
+58,twcs_10680,@SpotifyCares Infinite loading spinner when trying to search for songs or artist profiles on iOS 17.,Offline Playlists & Download Storage Management,"App Stability, OS Freezes & Crash Reports",76.0%,"Actual 'Offline Playlists & Download Storage Management' misclassified as 'App Stability, OS Freezes & Crash Reports'"
+111,twcs_10468,@SpotifyCares Song playback gets cut off 45 seconds before the track actually finishes playing.,Audio Streaming Quality & Playback Errors,Smart Speaker & External Device Connectivity,70.8%,Actual 'Audio Streaming Quality & Playback Errors' misclassified as 'Smart Speaker & External Device Connectivity'
+37,twcs_1,@SpotifyCares audio glitch,"App Stability, OS Freezes & Crash Reports",Audio Streaming Quality & Playback Errors,69.9%,"Actual 'App Stability, OS Freezes & Crash Reports' misclassified as 'Audio Streaming Quality & Playback Errors'"
+123,twcs_11994,@SpotifyCares When is Spotify HiFi 24-bit lossless streaming audio going to be released?,Product Feature Requests & UI Enhancements,Audio Streaming Quality & Playback Errors,67.8%,Actual 'Product Feature Requests & UI Enhancements' misclassified as 'Audio Streaming Quality & Playback Errors'
+79,twcs_10692,@SpotifyCares App crashes immediately upon tapping the 'Your Library' tab on iOS 15.,"Account Login, Password & Security Access","App Stability, OS Freezes & Crash Reports",66.4%,"Actual 'Account Login, Password & Security Access' misclassified as 'App Stability, OS Freezes & Crash Reports'"
+29,twcs_10702,@SpotifyCares macOS Monterey app displays a blank completely black screen after login and won't load UI.,"Account Login, Password & Security Access","App Stability, OS Freezes & Crash Reports",60.3%,"Actual 'Account Login, Password & Security Access' misclassified as 'App Stability, OS Freezes & Crash Reports'"
+142,twcs_10498,@SpotifyCares Music volume is extremely quiet compared to YouTube and Apple Music on max volume on iPhone 14 Pro.,Offline Playlists & Download Storage Management,Audio Streaming Quality & Playback Errors,57.5%,Actual 'Offline Playlists & Download Storage Management' misclassified as 'Audio Streaming Quality & Playback Errors'
+67,twcs_12102,@SpotifyCares Why are real-time karaoke lyrics not appearing on the web player and TV app for some tracks?,Product Feature Requests & UI Enhancements,Smart Speaker & External Device Connectivity,57.3%,Actual 'Product Feature Requests & UI Enhancements' misclassified as 'Smart Speaker & External Device Connectivity'
+158,twcs_12090,@SpotifyCares My Daily Mix playlists haven't refreshed for over a week. Same songs on repeat.,Audio Streaming Quality & Playback Errors,Product Feature Requests & UI Enhancements,55.8%,Actual 'Audio Streaming Quality & Playback Errors' misclassified as 'Product Feature Requests & UI Enhancements'
+83,twcs_10406,@SpotifyCares What audio bitrate does Spotify HiFi / Very High quality stream at on desktop vs mobile?,Family & Student Plan Eligibility & Verification,Audio Streaming Quality & Playback Errors,54.7%,Actual 'Family & Student Plan Eligibility & Verification' misclassified as 'Audio Streaming Quality & Playback Errors'
+130,twcs_11080,@SpotifyCares How do I sign out of all devices remotely if I left my account logged in at a public computer?,Product Feature Requests & UI Enhancements,"Account Login, Password & Security Access",54.2%,"Actual 'Product Feature Requests & UI Enhancements' misclassified as 'Account Login, Password & Security Access'"
+28,twcs_10458,@SpotifyCares Getting playback error code 'Spotify can't play this right now' on macOS Ventura.,Offline Playlists & Download Storage Management,Audio Streaming Quality & Playback Errors,52.7%,Actual 'Offline Playlists & Download Storage Management' misclassified as 'Audio Streaming Quality & Playback Errors'
+70,twcs_10050,@SpotifyCares Cancelled my subscription last week but still got billed $16.99 today. Please check invoice #INV-6519.,Offline Playlists & Download Storage Management,"Billing, Subscriptions & Refund Inquiries",51.7%,"Actual 'Offline Playlists & Download Storage Management' misclassified as 'Billing, Subscriptions & Refund Inquiries'"
+30,twcs_11200,@SpotifyCares I didn't receive the verification email to confirm my new email change request.,"Billing, Subscriptions & Refund Inquiries","Account Login, Password & Security Access",50.8%,"Actual 'Billing, Subscriptions & Refund Inquiries' misclassified as 'Account Login, Password & Security Access'"
+128,twcs_10280,@SpotifyCares Music audio keeps stuttering and buffering constantly during playback on Edge browser.,Audio Streaming Quality & Playback Errors,Smart Speaker & External Device Connectivity,50.3%,Actual 'Audio Streaming Quality & Playback Errors' misclassified as 'Smart Speaker & External Device Connectivity'
+114,twcs_10900,@SpotifyCares Is there an official Spotify app for Apple Watch Ultra with offline playback?,Offline Playlists & Download Storage Management,Smart Speaker & External Device Connectivity,49.2%,Actual 'Offline Playlists & Download Storage Management' misclassified as 'Smart Speaker & External Device Connectivity'
