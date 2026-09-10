@@ -10,14 +10,17 @@
 
 **SupportPilot** is an enterprise-grade, end-to-end AI customer support agent and intelligent triage platform. The system orchestrates **unsupervised & supervised intent discovery**, **grounded RAG reply generation**, **multi-factor escalation routing**, **Golden Set human-in-the-loop benchmarking**, and an **LLM-as-Judge evaluation framework** measuring statistical inter-rater agreement.
 
+> [!TIP]
+> 📖 **Full Take-Home Engineering Report**: See [**`REPORT.md`**](REPORT.md) for the detailed 6-section assignment report including problem framing, baseline comparisons, top 5 failure modes, "what is misleading about my headline number", next steps, and 14-item decision log.
+
 ---
 
 ## 📑 Table of Contents
-- [Architecture Overview](#-architecture-overview)
+- [Assignment Deliverables & Report](REPORT.md)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
+- [Getting Started & Reproduction (<15 min)](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Backend Setup](#backend-setup)
   - [Frontend Setup](#frontend-setup)
